@@ -1,14 +1,4 @@
-# Problem Set 2, hangman.py
-# Name: 
-# Collaborators:
-# Time spent:
 
-# Hangman Game
-# -----------------------------------
-# Helper code
-# You don't need to understand this helper code,
-# but you will have to know how to use the functions
-# (so be sure to read the docstrings!)
 import random
 import string
 
@@ -23,11 +13,8 @@ def load_words():
     take a while to finish.
     """
     print("Loading word list from file...")
-    # inFile: file
     inFile = open(WORDLIST_FILENAME, 'r')
-    # line: string
     line = inFile.readline()
-    # wordlist: list of strings
     wordlist = line.split()
     print("  ", len(wordlist), "words loaded.")
     return wordlist
@@ -41,12 +28,6 @@ def choose_word(wordlist):
     """
     return random.choice(wordlist)
 
-# end of helper code
-
-# -----------------------------------
-
-# Load the list of words into the variable wordlist
-# so that it can be accessed from anywhere in the program
 wordlist = load_words()
 
 
@@ -249,11 +230,7 @@ def hangman_with_hints(secret_word):
 
 
 if __name__ == "__main__":
-    # To test part 2, uncomment the following two lines.
+   
     secret_word = choose_word(wordlist)
     hangman(secret_word)
     
-    # To test part 3 re-comment out the above lines and 
-    # uncomment the following two lines. 
-    #secret_word = choose_word(wordlist)
-    #hangman_with_hints(secret_word)
